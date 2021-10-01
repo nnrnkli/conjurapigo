@@ -45,5 +45,6 @@ func main() {
            panic(err)
        }
        fmt.Println("The secret value is: ", string(secretValue))
+       time.Sleep(10 * time.Second)
     }
 }

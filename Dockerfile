@@ -18,6 +18,6 @@ COPY main.go go.mod ./
 RUN go mod download
 
 COPY . .
-RUN go build -o conjurapigo cmd/main.go
+RUN go build -o conjurapigo main.go
 
 EXPOSE 8080

@@ -14,7 +14,7 @@ RUN apk add --no-cache bash \
 
 WORKDIR /summon-conjur
 
-COPY main.go ./
+COPY main.go go.mod ./
 RUN go mod download
 
 COPY . .

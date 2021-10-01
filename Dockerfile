@@ -10,14 +10,14 @@ RUN apk add --no-cache bash \
     go get -u github.com/smartystreets/goconvey && \
     go get -u github.com/axw/gocov/gocov && \
     go get -u github.com/AlekSi/gocov-xml && \
-    mkdir -p /summon-conjur/output
+    mkdir -p /conjurapigo/output
 
-WORKDIR /summon-conjur
+WORKDIR /conjurapigo
 
 COPY main.go go.mod ./
 RUN go mod download
 
 COPY . .
-RUN go build -o summon-conjur cmd/main.go
+RUN go build -o conjurapigo cmd/main.go
 
 EXPOSE 8080

@@ -24,11 +24,10 @@ func main() {
     if err != nil {
         panic(err)
     }
-    for true
-    {
+    for true {
         // Retrieve a secret into []byte.
         secretValue, err := conjur.RetrieveSecret(variableIdentifier)
-      if err != nil {
+       if err != nil {
         panic(err)
        }
        fmt.Println("The secret value is: ", string(secretValue))
